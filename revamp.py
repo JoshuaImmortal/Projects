@@ -1,3 +1,4 @@
+import webbrowser
 from bs4 import BeautifulSoup
 import requests
 space = ''
@@ -13,8 +14,9 @@ for wrap in wrappers:
     space += str(wrap_img)
     maze += (wrap_titles)
     faze += (wrap_content)
-projekt = open("project.pdf", "w")
+projekt = open("project.html", "w")
 projekt.write(space)
 projekt.write(maze)
 projekt.write(faze)
 projekt.close()
+webbrowser.open("project.html")
